@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+	<%- include('./partials/head.ejs')  %>
 </head>
 <body>
-  
+  <%- include('./partials/header.ejs')  %>
+
+  <div class="container">
+    <div id="empty-col-1"><input type="hidden"></div>
+    <div id="empty-col-2"><input type="hidden"></div>
+    <div id="empty-col-3"><input type="hidden"></div>
+    <header>Header</header>
+    <nav>Navbar</nav>
+    <main>
+      <div id="build-a-bowl">Build A Bowl</div>
+      <div id="premade-sets">Premade Sets</div>
+      <div id="sets">
+        <div id="set-1">Set 1</div>
+        <div id="set-2">Set 2</div>
+        <div id="set-3">Set 3</div>
+        <div id="set-4">Set 4</div>
+    </div>
+    </main>
+    <footer><%- include('./partials/footer.ejs')  %></footer>
+  </div>
+
 </body>
 </html>
