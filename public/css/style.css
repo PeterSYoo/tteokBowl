@@ -22,12 +22,14 @@ body,html {
   height: 100vh;
   min-width: 1440px;
   grid-template-columns: 75px 1fr 75px;
-  grid-template-rows: 65px 30px 4fr 1fr;
+  grid-template-rows: 70px 32px 1fr 25px 40px 1fr;
   grid-template-areas:
     "header header header"
     "nav nav nav"
     "main main main"
-    "footer footer footer";
+    "empty-col-1 empty-col-1 empty-col-1"
+    "footer footer footer"
+    "empty-col-2 empty-col-2 empty-col-2";
   padding: 3% 3% 0 3%;
 }
 
@@ -54,7 +56,7 @@ header {
   border-bottom-style: solid;
   border-width: 1px;
   border-color: #ebebeb;
-  grid-template-columns: 75px 1fr 2fr 3fr 0.75fr 75px;
+  grid-template-columns: 90px 1fr 2fr 3fr 0.75fr 90px;
   grid-template-rows: 1fr;
   grid-template-areas: 
     "empty-col-1 logo build-your-bowl empty-col-2 profile-cart empty-col-3"
@@ -109,7 +111,7 @@ nav {
   align-content: center;
   background-color: #FFFFFF;
   grid-area: nav;
-  grid-template-columns: 75px 1fr 75px;
+  grid-template-columns: 90px 1fr 90px;
   grid-template-rows: 1fr;
   grid-template-areas: 
     "empty-col-1 nav empty-col-2";
@@ -128,8 +130,8 @@ nav {
 main {
   background-color: #FFFFFF;
   display: grid;
-  grid-template-columns: 75px 1fr 75px;
-  grid-template-rows: 2fr 0.25fr 1.75fr;
+  grid-template-columns: 90px 1fr 90px;
+  grid-template-rows: 420px 46px 345px;
   grid-template-areas:
     "empty-col-1 build-a-bowl empty-col-2"
     "empty-col-1 pre-made-sets empty-col-2"
@@ -143,7 +145,7 @@ main {
   background-color: #FFFFFF;
   grid-area: build-a-bowl;
   grid-template-columns: 0.5fr 1fr;
-  grid-template-rows: 500px;
+  grid-template-rows: 1fr;
   grid-template-areas:
     "build-a-bowl-left build-a-bowl-right";
 }
@@ -168,13 +170,15 @@ main {
   background-color: #FFFFFF;
   grid-area: pre-made-sets;
   font-size: 14px;
+  padding-bottom: 5px;
 }
 #sets {
   background-color: #FFFFFF;
   display: grid;
-  grid-template-columns: 280px 1fr 280px 1fr 280px 1fr 280px;
+  justify-content: space-between;
+  grid-template-columns: 257px 257px 257px 257px;
   grid-template-areas:
-    "set-1 empty-col-1 set-2 empty-col-2 set-3 empty-col-3 set-4";
+    "set-1 set-2 set-3 set-4";
   grid-area: sets;
 }
 #set-1 {
@@ -207,7 +211,7 @@ main {
 footer {
   display: grid;
   background-color: #FFFFFF;
-  grid-template-columns: 75px 1fr 75px;
+  grid-template-columns: 90px 1fr 90px;
   grid-template-rows: 1fr;
   grid-template-areas:
     "empty-col-1 footer empty-col-2";
@@ -216,7 +220,7 @@ footer {
 #footer {
   display: grid;
   justify-content: center;
-  align-content: end;
+  align-content: start;
   grid-area: footer;
   font-size: 12px;
 }
