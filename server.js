@@ -2,6 +2,9 @@ require('dotenv').config()
 // Dependencies
 const express = require('express');
 const methodOverride = require('method-override');
+const userController = require('./controllers/users');
+const sessionsController = require('./controllers/sessions');
+const session = require('express-session');
 const mongoose = require ('mongoose');
 const app = express();
 const db = mongoose.connection;
@@ -18,12 +21,23 @@ db.on('connected', () => console.log('mongod connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongod disconnected'));
 
 // Middleware
-//use public folder for static assets
+// Express Session
+app.use(
+  session({
+      secret: process.env.SECRET,
+      resave: false,
+      saveUninitialized: false,
+  }));
+// Use public folder for static assets
 app.use(express.static(__dirname + '/public'));
+// Body parser: gives us access to req.body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Method Override
 app.use(methodOverride('_method'));
+// Controllers
+app.use('/users', userController);
+app.use('/sessions', sessionsController);
 
 // Routes
 // Index
@@ -36,7 +50,7 @@ app.get('/' , (req, res) => {
 // Show
 app.get('/sets/:id' , (req, res) => {
   TteokBowl.findById(req.params.id, (error, foundBowl) => {
-    res.render('index.ejs', {
+    res.render('/sets/index.ejs', {
       tteok: foundBowl,
       tabTitle: 'Tteok Bowl | Premade Bowl',
     });

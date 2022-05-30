@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('../partials/head.ejs')  %>
+</head>
+<body>
+  <%- include('../partials/header.ejs')  %>
+
+  <div class="container">
+    <!--Empty Columns-->
+    <%- include('../partials/empty-col.ejs')  %>
+    <!--/Empty Columns-->
+    <header>
+      <%- include('../partials/header.ejs')  %>
+    </header>
+    <nav>
+      <div id="nav">Home Page > New</div>
+    </nav>
+    <main id="m-users-new">
+      <h1>Register</h1>
+      <form action='/users' method='POST'>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" />
+    
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" />
+    
+        <input type="submit" value="Register">
+      </form>
+    </main>
+    <footer>
+      <div id="footer">
+        <%- include('../partials/footer.ejs')  %>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
