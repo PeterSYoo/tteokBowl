@@ -26,13 +26,22 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 
 // Routes
+// Index
 app.get('/' , (req, res) => {
-  TteokBowl.find({}, (error, allBowls) => {
     res.render('index.ejs', {
-      tteok: allBowls,
+      tabTitle: 'Tteok Bowl',
     })
-  })
 });
+
+// Show
+app.get('/sets/:id' , (req, res) => {
+  TteokBowl.findById(req.params.id, (error, foundBowl) => {
+    res.render('index.ejs', {
+      tteok: foundBowl,
+      tabTitle: 'Tteok Bowl | Premade Bowl',
+    });
+  });
+})
 
 // Create
 app.post('/', (req, res) => {
