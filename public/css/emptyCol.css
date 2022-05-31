@@ -1,0 +1,14 @@
+/* Empty Columns */
+.empty-col-1 {
+  background-color: #FFFFFF;
+  grid-area: empty-col-1;
+}
+.empty-col-2 {
+  background-color: #FFFFFF;
+  grid-area: empty-col-2;
+}
+.empty-col-3 {
+  background-color: #FFFFFF;
+  grid-area: empty-col-3;
+}
+/* /Empty Columns */

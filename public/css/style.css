@@ -1,3 +1,4 @@
+@import url('emptyCol.css');
 @import url('main/home.css');
 @import url('main/sets.css');
 @import url('main/register.css');
@@ -38,21 +39,6 @@ body,html {
     "empty-col-2 empty-col-2 empty-col-2";
   padding: 3% 3% 0 3%;
 }
-
-/* Empty Columns */
-.empty-col-1 {
-  background-color: #FFFFFF;
-  grid-area: empty-col-1;
-}
-.empty-col-2 {
-  background-color: #FFFFFF;
-  grid-area: empty-col-2;
-}
-.empty-col-3 {
-  background-color: #FFFFFF;
-  grid-area: empty-col-3;
-}
-/* /Empty Columns */
 
 /* Header */
 header {
