@@ -23,6 +23,7 @@ User is able to customize their own spicy rice cake bowl. They can add it to car
 
 # Getting Started
 [Deployed to Heroku](https://warm-brook-32210.herokuapp.com/)
+
 No need to register, login with
 - User: 1@1.com
 - Password: 1
