@@ -4,7 +4,6 @@ const express = require('express');
 const methodOverride = require('method-override');
 const userController = require('./controllers/users');
 const sessionsController = require('./controllers/sessions');
-const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const mongoose = require ('mongoose');
 const app = express();
@@ -23,13 +22,11 @@ db.on('disconnected', () => console.log('mongod disconnected'));
 
 // Middleware
 // Express Session
-app.use(cookieParser());
 app.use(
   session({
-      secret: process.env.SECRET,
-      resave: true,
-      saveUninitialized: true,
-      cookie:{maxAge:3600000*24},
+      secret: 'tofumofu',
+      resave: false,
+      saveUninitialized: false,
   }));
 // Use public folder for static assets
 app.use(express.static(__dirname + '/public'));
