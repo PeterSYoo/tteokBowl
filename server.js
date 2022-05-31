@@ -6,12 +6,14 @@ const userController = require('./controllers/users');
 const sessionsController = require('./controllers/sessions');
 const session = require('express-session');
 const mongoose = require ('mongoose');
+const bcrypt = require('bcrypt');
 const app = express();
 const db = mongoose.connection;
 const MONGODB_URI = process.env.MONGODB_URI;
 const PORT = process.env.PORT;
 
 const TteokBowl = require('./models/tteok')
+const User = require('./models/user.js');
 
 // Database Connect
 mongoose.connect(MONGODB_URI , {});
@@ -35,6 +37,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Method Override
 app.use(methodOverride('_method'));
+app.use(( req, res, next ) => {
+  if ( req.query._method == 'DELETE' ) {
+      // change the original METHOD
+      // into DELETE method
+      req.method = 'DELETE';
+      // and set requested url to /user/12
+      req.url = req.path;
+  }       
+  next(); 
+});
 // Controllers
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
@@ -43,7 +55,7 @@ app.use('/sessions', sessionsController);
 // Index
 app.get('/', (req, res) => {
 		res.render('index.ejs', {
-			currentUser: req.session.currentUser
+			currentUser: req.session.currentUser,
 		});
 });
 
@@ -57,11 +69,32 @@ app.get('/sets/:id' , (req, res) => {
   });
 })
 
-// Create
+// Create / Login route
 app.post('/', (req, res) => {
-  TteokBowl.create(req.body, (error, createdBowls) => {
-		res.redirect('/');
-    console.log(req.body);
+  // check for an existing user
+  User.findOne({
+    email: req.body.email
+  }, (error, foundUser) => {
+    // send error msg if no user is found
+    if (!foundUser) {
+      res.send('Oops! No user with that email address has been registered.');
+    } else {
+      // if a user has been found
+      // compare given password with hashed password we have stored
+      const passwordMatches = bcrypt.compareSync(req.body.password, foundUser.password);
+
+      // if passwords match
+      if (passwordMatches) {
+        // add user to our session
+        req.session.currentUser = foundUser;
+
+        //  redirect back to home page
+        res.redirect('/');
+      } else {
+        // if passwords don't match
+        res.send('Oops! Invalid credentials.');
+      }
+    }
   });
 })
 

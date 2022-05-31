@@ -1,4 +1,4 @@
-/* Main - /sets/index.ejs */
+/* Main - Sets */
 .m-index {
   background-color: #FFFFFF;
   display: grid;
@@ -10,4 +10,4 @@
     "empty-col-1 sets empty-col-2";
   grid-area: main;
 }
-/* /Main - /sets/index.ejs */
+/* /Main */

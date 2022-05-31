@@ -1,22 +1,32 @@
 <div class="logo"><a href="/"><img src="https://i.imgur.com/IKfgyk4.png"></a></div>
 <div class="build-your-bowl">Build your own bowl now!</div>
-<div class="user-registration">
+<div class="profile-cart">
+  <div class="profile">
+
+    <div class="profile-dropdown" data-dropdown>
+      <button class="link"><img src="https://i.imgur.com/V3j3sKw.png" data-dropdown-button></button>
+      <div class="profile-dropdown-login">
+        <div class="login-form">
+          <form action='/' method='POST'>
+            <center>Login</center><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" /><br><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" /><br><br>
+            <center><button onclick="">Login</button></center><br>
+            <center><a href="/users/new">Don't have an account? Register</a></center>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="cart">
+    <a href="#"><img src="https://i.imgur.com/c71OI2k.png"></a>
+  </div>
   <% if (currentUser) { %>
     <div class="logout">
-      <form action="/sessions?_method=DELETE" method="POST">
-        <input type="submit" value="Log Out" />
-      </form>
-    </div>
-	<% } else { %>
-    <div class="register">
-      <a href="/users/new">Register</a>
-    </div>
-    <div class="login">
-      <a href="/sessions/new">Login</a>
+        <a href="/sessions?_method=DELETE"><img src="https://i.imgur.com/ukZRHOp.png"></a>
     </div>
   <% } %>
-</div>
-<div class="profile-cart">
-  <div class="profile"><img src="https://i.imgur.com/V3j3sKw.png"></div>
-  <div class="cart"><img src="https://i.imgur.com/c71OI2k.png"></div>
 </div>

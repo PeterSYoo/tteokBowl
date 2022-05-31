@@ -48,10 +48,10 @@ header {
   border-bottom-style: solid;
   border-width: 1px;
   border-color: #ebebeb;
-  grid-template-columns: 90px 1fr 2fr 3fr 0.75fr 90px;
+  grid-template-columns: 90px 1fr 2fr 3fr 250px 90px;
   grid-template-rows: 1fr;
   grid-template-areas: 
-    "empty-col-1 logo build-your-bowl user-registration profile-cart empty-col-3"
+    "empty-col-1 logo build-your-bowl empty-col-2 profile-cart empty-col-3"
 }
 .logo {
   display: grid;
@@ -72,56 +72,61 @@ header {
   grid-area: build-your-bowl;
   font-size: 14px;
 }
-.user-registration {
-  display: grid;
-  grid-area: user-registration;
-  grid-template-columns: 1fr 100px;
-  grid-template-rows: 1fr;
-  grid-template-areas: 
-    "register login";
-}
-.logout {
-  display: grid;
-  justify-content: end;
-  align-content: center;
-  grid-area: login;
-  padding-right: 35px;
-}
-.register {
-  display: grid;
-  justify-content: end;
-  align-content: center;
-  grid-area: register;
-}
-.login {
-  display: grid;
-  justify-content: end;
-  align-content: center;
-  grid-area: login;
-  padding-right: 35px;
-}
 .profile-cart {
   display: grid;
-  border-left-style: solid;
-  border-width: 1px;
-  border-color: #ebebeb;
+  justify-content: end;
+  align-content: center;
   grid-area: profile-cart;
-  grid-template-columns: 1fr 60px;
+  grid-template-columns: 80px 60px auto;
   grid-template-rows: 1fr;
   grid-template-areas: 
-    "profile cart";
+    "profile cart logout";
 }
 .profile {
   display: grid;
   justify-content: end;
   align-content: center;
   grid-area: profile;
+  border-left-style: solid;
+  border-width: 1px;
+  border-color: #ebebeb;
+}
+.profile-dropdown>button {
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+}
+.profile-dropdown {
+  position: relative;
+}
+.profile-dropdown-login {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 150ms ease-in-out;
+}
+.profile-dropdown.active > .link + .profile-dropdown-login {
+  opacity: 1;
+  right: -65px;
+  transform: translateY(0);
+  pointer-events: auto;
+  background-color: #FFFFFF;
+  padding: 15px;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
 }
 .cart {
   display: grid;
   justify-content: end;
   align-content: center;
   grid-area: cart;
+}
+.logout {
+  display: grid;
+  justify-content: end;
+  align-content: center;
+  grid-area: logout;
+  margin-left: 25px;
 }
 /* /Header */
 
@@ -164,3 +169,5 @@ footer {
   font-size: 12px;
 }
 /* /Footer */
+
+/* Login form */
