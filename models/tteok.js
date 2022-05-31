@@ -2,6 +2,20 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const tteokBowlSchema = new Schema({
+  spiceLevel: {
+    mild: {
+      type: Boolean
+    },
+    original: {
+      type: Boolean
+    },
+    spicy: {
+      type: Boolean
+    },
+    volcano: {
+      type: Boolean
+    }
+  },
   toppings: {
     riceCakes: {
       extra: {
@@ -59,7 +73,7 @@ const tteokBowlSchema = new Schema({
         type: String
       }
     },
-    cheese: {
+    mozzCheese: {
       extra: {
         type: Boolean
       },
@@ -72,20 +86,48 @@ const tteokBowlSchema = new Schema({
       name: {
         type: String
       }
-    }
-  },
-  spiceLevel: {
-    mild: {
-      type: Boolean
     },
-    original: {
-      type: Boolean
+    udonNoodles: {
+      extra: {
+        type: Boolean
+      },
+      price: {
+        type: Number
+      },
+      include: {
+        type: Boolean
+      },
+      name: {
+        type: String
+      }
     },
-    spicy: {
-      type: Boolean
+    miniSausages: {
+      extra: {
+        type: Boolean
+      },
+      price: {
+        type: Number
+      },
+      include: {
+        type: Boolean
+      },
+      name: {
+        type: String
+      }
     },
-    volcano: {
-      type: Boolean
+    spam: {
+      extra: {
+        type: Boolean
+      },
+      price: {
+        type: Number
+      },
+      include: {
+        type: Boolean
+      },
+      name: {
+        type: String
+      }
     }
   }
 });
