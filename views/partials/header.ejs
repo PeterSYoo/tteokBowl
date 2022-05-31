@@ -1,10 +1,22 @@
-<div id="logo"><a href="/"><img src="https://i.imgur.com/IKfgyk4.png"></a></div>
-<div id="build-your-bowl">Build your own bowl now!</div>
-<div id="user-registration">
-  <a href="/users/new">Register</a>
-	<a href="/sessions/new">Login</a>
+<div class="logo"><a href="/"><img src="https://i.imgur.com/IKfgyk4.png"></a></div>
+<div class="build-your-bowl">Build your own bowl now!</div>
+<div class="user-registration">
+  <% if (currentUser) { %>
+    <div class="logout">
+      <form action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" value="Log Out" />
+      </form>
+    </div>
+	<% } else { %>
+    <div class="register">
+      <a href="/users/new">Register</a>
+    </div>
+    <div class="login">
+      <a href="/sessions/new">Login</a>
+    </div>
+  <% } %>
 </div>
-<div id="profile-cart">
-  <div id="profile"><img src="https://i.imgur.com/V3j3sKw.png"></div>
-  <div id="cart"><img src="https://i.imgur.com/c71OI2k.png"></div>
+<div class="profile-cart">
+  <div class="profile"><img src="https://i.imgur.com/V3j3sKw.png"></div>
+  <div class="cart"><img src="https://i.imgur.com/c71OI2k.png"></div>
 </div>

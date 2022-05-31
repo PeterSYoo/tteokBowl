@@ -1,5 +1,5 @@
 /* Main - Home */
-.main-users-new {
+.main-login-new {
   background-color: #FFFFFF;
   display: grid;
   grid-template-columns: 90px 1fr 90px;
@@ -9,13 +9,13 @@
     "empty-col-1 register-form empty-col-2";
   grid-area: main;
 }
-.register-title {
+.login-title {
   display: grid;
   justify-content: center;
   align-content: start;
   grid-area: register-title;
 }
-.register-form {
+.login-form {
   display: grid;
   justify-content: center;
   align-content: start;

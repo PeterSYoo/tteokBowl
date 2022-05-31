@@ -4,7 +4,6 @@
 	<%- include('../partials/head.ejs')  %>
 </head>
 <body>
-  <%- include('../partials/header.ejs')  %>
 
   <div class="container">
     <!--Empty Columns-->
@@ -14,22 +13,26 @@
       <%- include('../partials/header.ejs')  %>
     </header>
     <nav>
-      <div id="nav">Home Page > New</div>
+      <div class="nav">Home Page > Login</div>
     </nav>
-    <main id="m-sessions-new">
-      <h1>Login</h1>
-      <form action='/sessions' method='POST'>
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" />
-    
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" />
-    
-        <input type="submit" value="Login">
-      </form>
+    <main class="main-login-new">
+      <div class="login-title">
+        <h1>Login</h1>
+      </div>
+      <div class="login-form">
+        <form action='/sessions' method='POST'>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" />
+      
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" />
+      
+          <input type="submit" value="Login">
+        </form>
+      </div>
     </main>
     <footer>
-      <div id="footer">
+      <div class="footer">
         <%- include('../partials/footer.ejs')  %>
       </div>
     </footer>

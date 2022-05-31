@@ -43,6 +43,7 @@ app.use('/sessions', sessionsController);
 // Index
 app.get('/' , (req, res) => {
     res.render('index.ejs', {
+      currentUser: req.session.currentUser,
       tabTitle: 'Tteok Bowl',
     })
 });

@@ -1,6 +1,7 @@
 @import url('main/home.css');
 @import url('main/sets.css');
 @import url('main/register.css');
+@import url('main/login.css');
 
 * {
   box-sizing: border-box;
@@ -38,15 +39,15 @@ body,html {
 }
 
 /* Empty Columns */
-#empty-col-1 {
+.empty-col-1 {
   background-color: #FFFFFF;
   grid-area: empty-col-1;
 }
-#empty-col-2 {
+.empty-col-2 {
   background-color: #FFFFFF;
   grid-area: empty-col-2;
 }
-#empty-col-3 {
+.empty-col-3 {
   background-color: #FFFFFF;
   grid-area: empty-col-3;
 }
@@ -65,7 +66,7 @@ header {
   grid-template-areas: 
     "empty-col-1 logo build-your-bowl user-registration profile-cart empty-col-3"
 }
-#logo {
+.logo {
   display: grid;
   justify-content: start;
   align-content: center;
@@ -74,7 +75,7 @@ header {
   border-color: #ebebeb;
   grid-area: logo;
 }
-#build-your-bowl {
+.build-your-bowl {
   display: grid;
   justify-content: center;
   align-content: center;
@@ -84,11 +85,35 @@ header {
   grid-area: build-your-bowl;
   font-size: 14px;
 }
-#user-registration {
+.user-registration {
   display: grid;
   grid-area: user-registration;
+  grid-template-columns: 1fr 100px;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "register login";
 }
-#profile-cart {
+.logout {
+  display: grid;
+  justify-content: end;
+  align-content: center;
+  grid-area: login;
+  padding-right: 35px;
+}
+.register {
+  display: grid;
+  justify-content: end;
+  align-content: center;
+  grid-area: register;
+}
+.login {
+  display: grid;
+  justify-content: end;
+  align-content: center;
+  grid-area: login;
+  padding-right: 35px;
+}
+.profile-cart {
   display: grid;
   border-left-style: solid;
   border-width: 1px;
@@ -99,13 +124,13 @@ header {
   grid-template-areas: 
     "profile cart";
 }
-#profile {
+.profile {
   display: grid;
   justify-content: end;
   align-content: center;
   grid-area: profile;
 }
-#cart {
+.cart {
   display: grid;
   justify-content: end;
   align-content: center;
@@ -124,7 +149,7 @@ nav {
   grid-template-areas: 
     "empty-col-1 nav empty-col-2";
 }
-#nav {
+.nav {
   display: grid;
   align-content: center;
   justify-content: start;
@@ -144,7 +169,7 @@ footer {
     "empty-col-1 footer empty-col-2";
   grid-area: footer;
 }
-#footer {
+.footer {
   display: grid;
   justify-content: center;
   align-content: start;

@@ -4,7 +4,6 @@
 	<%- include('../partials/head.ejs')  %>
 </head>
 <body>
-  <%- include('../partials/header.ejs')  %>
 
   <div class="container">
     <!--Empty Columns-->
@@ -14,22 +13,26 @@
       <%- include('../partials/header.ejs')  %>
     </header>
     <nav>
-      <div id="nav">Home Page > New</div>
+      <div class="nav">Home Page > New</div>
     </nav>
-    <main id="m-users-new">
-      <h1>Register</h1>
-      <form action='/users' method='POST'>
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" />
-    
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" />
-    
-        <input type="submit" value="Register">
-      </form>
+    <main class="main-users-new">
+      <div class="register-title">
+        <h1>Register</h1>
+      </div>
+      <div class="register-form">
+        <form action='/users' method='POST'>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" />
+      
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" />
+      
+          <input type="submit" value="Register">
+        </form>
+      </div>
     </main>
     <footer>
-      <div id="footer">
+      <div class="footer">
         <%- include('../partials/footer.ejs')  %>
       </div>
     </footer>
