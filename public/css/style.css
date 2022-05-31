@@ -77,10 +77,10 @@ header {
   justify-content: end;
   align-content: center;
   grid-area: profile-cart;
-  grid-template-columns: 80px 60px auto;
+  grid-template-columns: 80px 60px 60px auto;
   grid-template-rows: 1fr;
   grid-template-areas: 
-    "profile cart logout";
+    "profile favorites cart logout";
 }
 .profile {
   display: grid;
@@ -115,6 +115,13 @@ header {
   border: 1px solid #ebebeb;
   border-radius: 10px;
 }
+.favorites {
+  display: grid;
+  justify-content: end;
+  align-content: center;
+  grid-area: favorites;
+  margin-right: 2px;
+}
 .cart {
   display: grid;
   justify-content: end;
@@ -126,7 +133,7 @@ header {
   justify-content: end;
   align-content: center;
   grid-area: logout;
-  margin-left: 25px;
+  margin-left: 21px;
 }
 /* /Header */
 
