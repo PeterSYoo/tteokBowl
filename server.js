@@ -22,11 +22,13 @@ db.on('disconnected', () => console.log('mongod disconnected'));
 
 // Middleware
 // Express Session
+app.use(cookieParser());
 app.use(
   session({
       secret: process.env.SECRET,
-      resave: false,
-      saveUninitialized: false,
+      resave: true,
+      saveUninitialized: true,
+      cookie:{maxAge:3600000*24},
   }));
 // Use public folder for static assets
 app.use(express.static(__dirname + '/public'));
