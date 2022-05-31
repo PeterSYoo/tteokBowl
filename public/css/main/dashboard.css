@@ -1,0 +1,14 @@
+/* Main - Home */
+.main-dashboard {
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  grid-template-rows: 811px;
+  grid-template-areas:
+    "empty-col-1 dashboard-title empty-col-2";
+  grid-area: main;
+}
+.dashboard-title {
+  grid-area: dashboard-title;
+}
+/* /Main */

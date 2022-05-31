@@ -16,7 +16,7 @@ sessionsRouter.delete('/', (req, res) => {
   req.session.destroy((error) => {
     res.redirect('/');
   });
-})
+});
 
 // Create (login route)
 sessionsRouter.post('/', (req, res) => {

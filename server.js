@@ -41,11 +41,16 @@ app.use('/sessions', sessionsController);
 
 // Routes
 // Index
-app.get('/' , (req, res) => {
-    res.render('index.ejs', {
-      currentUser: req.session.currentUser,
-      tabTitle: 'Tteok Bowl',
-    })
+app.get('/', (req, res) => {
+	if (req.session.currentUser) {
+		res.render('dashboard.ejs', {
+			currentUser: req.session.currentUser
+		});
+	} else {
+		res.render('index.ejs', {
+			currentUser: req.session.currentUser
+		});
+	}
 });
 
 // Show

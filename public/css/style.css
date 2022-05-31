@@ -2,6 +2,7 @@
 @import url('main/sets.css');
 @import url('main/register.css');
 @import url('main/login.css');
+@import url('main/dashboard.css');
 
 * {
   box-sizing: border-box;
