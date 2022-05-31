@@ -6,6 +6,7 @@
     <div class="profile-dropdown" data-dropdown>
       <button class="link"><img src="https://i.imgur.com/V3j3sKw.png" data-dropdown-button></button>
       <div class="profile-dropdown-login">
+        <% if (!currentUser) { %>
         <div class="login-form">
           <form action='/' method='POST'>
             <center>Login</center><br>
@@ -17,6 +18,11 @@
             <center><a href="/users/new">Don't have an account? Register</a></center>
           </form>
         </div>
+        <% } else { %>
+          <div class="logged-in">
+            <p>You are already logged in!</p>
+          </div>
+        <% } %>
       </div>
     </div>
   </div>
@@ -27,6 +33,10 @@
   <% if (currentUser) { %>
     <div class="logout">
         <a href="/sessions?_method=DELETE"><img src="https://i.imgur.com/ukZRHOp.png"></a>
+    </div>
+  <% } else { %>
+    <div class="sign-up">
+      <a href="/users/new"><img src="https://i.imgur.com/1BkSdTS.png"></a>
     </div>
   <% } %>
 </div>

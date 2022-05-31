@@ -107,6 +107,7 @@ header {
   font-size: 14px;
 }
 .profile-dropdown.active > .link + .profile-dropdown-login {
+  width: 190px;
   opacity: 1;
   right: -65px;
   top: 50px;
@@ -116,6 +117,9 @@ header {
   padding: 15px;
   border: 1px solid #ebebeb;
   border-radius: 10px;
+}
+.logged-in {
+  width: 190px;
 }
 .login-button {
   cursor: pointer;
@@ -136,6 +140,13 @@ header {
   grid-area: cart;
 }
 .logout {
+  display: grid;
+  justify-content: end;
+  align-content: center;
+  grid-area: logout;
+  margin-left: 21px;
+}
+.sign-up {
   display: grid;
   justify-content: end;
   align-content: center;
