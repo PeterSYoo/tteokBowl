@@ -24,7 +24,7 @@ db.on('disconnected', () => console.log('mongod disconnected'));
 // Express Session
 app.use(
   session({
-      secret: 'tofumofu',
+      secret: process.env.SECRET,
       resave: false,
       saveUninitialized: false,
   }));
