@@ -12,17 +12,24 @@ userRouter.get('/new', (req, res) => {
   });
 });
 
+userRouter.get('/error', (req, res) => {
+  res.render('users/error.ejs', {
+    currentUser: req.session.currentUser,
+    createdUser: req.session.createdUser,
+  });
+});
+
 // Create (registration route)
 userRouter.post('/', (req, res) => {
   //overwrite the user password with the hashed password, then pass that in to our database
   req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
 
-  User.create(req.body, (error, createdUser) => {
+  User.create(req.body, (error, createdUser, then) => {
     if (createdUser) {
       req.session.currentUser = createdUser;
       res.redirect('/');
     } else {
-      res.send('Email is already in use!')
+      res.redirect('/users/error')
     }
   });
 });

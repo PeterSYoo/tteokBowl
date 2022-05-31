@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('../partials/head.ejs')  %>
+</head>
+<body>
+
+  <div class="container">
+    <!--Empty Columns-->
+    <%- include('../partials/empty-col.ejs')  %>
+    <!--/Empty Columns-->
+    <header>
+      <%- include('../partials/header.ejs')  %>
+    </header>
+    <nav>
+      <div class="nav">Home Page > New</div>
+    </nav>
+    <main class="main-users-new">
+      <div class="register-title">
+        <h1>That email is already in use.</h1>
+      </div>
+      <div class="register-form">
+        <form action='/users' method='POST'>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" />
+      
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" />
+      
+          <input type="submit" value="Register">
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <%- include('../partials/footer.ejs')  %>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
