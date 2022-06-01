@@ -26,5 +26,39 @@ router.get('/:id/review', (req, res) => {
   });
 })
 
+// Update
+router.put('/:id/review', (req, res) => {
+  Tteok.findByIdAndUpdate(
+    req.params.id,
+    {
+      name: req.body.name,
+      spiceLevel: {
+        name: req.body.spiceLevelName,
+        },
+      toppings: {
+        riceCakes: {
+          name: req.body.riceCakesName,
+          price: req.body.riceCakesPrice,
+          choice: req.body.riceCakesChoice,
+          extras: {
+            choice: req.body.riceCakesExtrasChoice,
+            },
+          },
+        },
+    },
+    (error, updatedLogs) => {
+      res.redirect(`/cart`);
+    }
+  )
+});
+
+
+// Delete
+router.delete('/:id', (req, res) => {
+	Tteok.findByIdAndDelete(req.params.id, (error, deletedProducts) => {
+    res.redirect('/cart');
+	});
+});
+
 // Export User Router
 module.exports = router;

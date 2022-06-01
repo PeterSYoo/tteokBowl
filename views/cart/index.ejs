@@ -25,12 +25,13 @@
         </div>
         <div class="cart-list">
         <form>
-        <h1>Cart</h1>
+        <h2>Cart</h2>
         <hr>
           <div class="cart-items">
             <div class="cart-list-left">
               <% tteok.forEach(tteok => { %>
                 <a href="/cart/<%= tteok._id %>/review">Edit</a>
+                <a href="/cart/<%= tteok._id %>?_method=DELETE">&nbsp;Delete</a>
                 <font class="tab"><%= tteok.name %></font><br>
               <% }) %>
             </div>

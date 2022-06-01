@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
         },
       },
   }, (error, createdBowl) => {
-		res.redirect('/buildabowl');
+		res.redirect('/cart');
     console.log(req.body);
   });
 })
