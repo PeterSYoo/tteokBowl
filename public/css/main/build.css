@@ -30,6 +30,28 @@
   grid-area: build-bowl-list;
   margin: 50px 0 0 50px;
 }
+.add-to-cart {
+  display: grid;
+  grid-area: build-bowl-list;
+}
+.add-to-cart>input {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.add-to-favorites {
+  display: grid;
+  grid-area: build-bowl-list;
+}
+.add-to-favorites>input {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 .toppings {
   display: grid;
   grid-template-columns: 1fr 1fr;
