@@ -16,9 +16,32 @@
       <div class="nav">Home Page > Review</div>
     </nav>
     <main class="main-review">
-      <div class="build-container">
+      <div class="review-container">
         <div class="go-back">
-          <a href="/"><img src="https://i.imgur.com/rEXIDeo.png"></a>
+          <script>
+            document.write('<a href="' + document.referrer + '"><img src="https://i.imgur.com/rEXIDeo.png"></a>');
+          </script>
+        </div>
+
+        <div class="review-list">
+
+            <div class="review-items">
+              <div class="review-list-left">
+                <%= tteok.name %>
+              </div>
+              <div class="review-list-right">
+                $15
+              </div>
+            </div>
+            <hr>
+            <div class="review-list-right">
+              Total - $15
+            </div>
+
+          </div>
+          
+        <div class="bowl-img-review">
+          <img src="https://via.placeholder.com/446x409.png">
         </div>
 
       </div>

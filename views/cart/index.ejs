@@ -19,16 +19,20 @@
 
       <div class="cart-container">
         <div class="go-back">
-          <a href="/"><img src="https://i.imgur.com/rEXIDeo.png"></a>
+          <script>
+          document.write('<a href="' + document.referrer + '"><img src="https://i.imgur.com/rEXIDeo.png"></a>');
+          </script>
         </div>
         <div class="cart-list">
         <form>
-        Cart
+        <h1>Cart</h1>
         <hr>
           <div class="cart-items">
             <div class="cart-list-left">
-              <input type="submit" value="Edit"></input>
-              <font class="tab">Teeok Bowl Name</font>
+              <% tteok.forEach(tteok => { %>
+                <a href="/cart/<%= tteok._id %>/review">Edit</a>
+                <font class="tab"><%= tteok.name %></font><br>
+              <% }) %>
             </div>
             <div class="cart-list-right">
               $15

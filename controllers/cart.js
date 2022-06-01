@@ -15,11 +15,13 @@ router.get('/', (req, res) => {
   });
 })
 
-// Show / Review
-router.get('/:id', (req, res) => {
-  Tteok.findById(req.params.id, (error, foundProduct) => {
+// Show / Edit / Review
+router.get('/:id/review', (req, res) => {
+  Tteok.findById(req.params.id, (error, foundTteok) => {
     res.render('cart/review.ejs', {
-      tteok: foundProduct,
+      tteok: foundTteok,
+      currentUser: req.session.currentUser,
+      createdUser: req.session.createdUser,
     });
   });
 })

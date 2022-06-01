@@ -5,22 +5,46 @@
   grid-template-columns: 90px 1120px 90px;
   grid-template-rows: 811px;
   grid-template-areas:
-  "empty-col-1 build-container empty-col-2";
+  "empty-col-1 review-container empty-col-2";
   grid-area: main;
 }
-.build-container {
-  grid-area: build-container;
+.review-container {
+  grid-area: review-container;
   display: grid;
   grid-template-columns: 60px 530px 530px;
   grid-template-rows: 811px;
   grid-template-areas:
-  "go-back bowl-img build-bowl-list";
+  "go-back review-list bowl-img";
 }
 .go-back {
   grid-area: go-back;
   margin-top: 150px;
 }
-
+.review-list {
+  grid-area: review-list;
+  margin: 50px 0 0 50px;
+}
+.review-items {
+  display: grid;
+  grid-template-columns: 1fr 0.25fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "review-list-left review-list-right";
+}
+.review-list-left {
+  grid-area: review-list-left;
+}
+.review-list-right {
+  grid-area: review-list-right;
+  display: grid;
+  justify-content: end;
+}
+.bowl-img-review {
+  grid-area: bowl-img;
+  margin-top: 75px;
+  display: grid;
+  justify-content: end;
+}
 hr {
   border: 0;
   height: 0;
