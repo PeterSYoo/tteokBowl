@@ -28,7 +28,7 @@
 }
 .build-bowl-list {
   grid-area: build-bowl-list;
-  margin: 50px;
+  margin: 50px 0 0 50px;
 }
 .toppings {
   display: grid;
