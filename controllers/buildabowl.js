@@ -15,12 +15,15 @@ router.get('/', (req, res) => {
 // Create
 router.post('/', (req, res) => {
   Tteok.create({
+    name: req.body.name,
     spiceLevel: {
       name: req.body.spiceLevelName,
       },
     toppings: {
       riceCakes: {
         name: req.body.riceCakesName,
+        price: req.body.riceCakesPrice,
+        choice: req.body.riceCakesChoice,
         extras: {
           choice: req.body.riceCakesExtrasChoice,
           },

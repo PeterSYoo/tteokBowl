@@ -16,15 +16,37 @@
       <div class="nav">Home Page > Cart</div>
     </nav>
     <main class="main-cart">
-      <div class="cart-title">
-        <h1>Cart</h1>
-          <% tteok.forEach(tteok => {  %>
-            Spice Level - <%= tteok.spiceLevel.name %><br>
-            <%= tteok.toppings.riceCakes.name %> - $<br>
-            - Extras - $<br>
-            Ramen Noodles - - $<br>
-            - Extras - $<br>
-          <% }) %>
+
+      <div class="cart-container">
+        <div class="go-back">
+          <a href="/"><img src="https://i.imgur.com/rEXIDeo.png"></a>
+        </div>
+        <div class="cart-list">
+        <form>
+        Cart
+        <hr>
+          <div class="cart-items">
+            <div class="cart-list-left">
+              <input type="submit" value="Edit"></input>
+              <font class="tab">Teeok Bowl Name</font>
+            </div>
+            <div class="cart-list-right">
+              $15
+            </div>
+          </div>
+          <hr>
+          <div class="cart-list-right">
+            Total - $15
+          </div>
+          <br><br>
+          <div class="payment-info">
+            <input type="submit" value="Payment info"></input>
+          </div>
+        </div>
+      </form>
+      <div class="bowl-img">
+        <img src="https://via.placeholder.com/446x409.png">
+      </div>
       </div>
     </main>
     <footer>

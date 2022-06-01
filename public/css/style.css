@@ -6,6 +6,7 @@
 @import url('main/dashboard.css');
 @import url('main/build.css');
 @import url('main/cart.css');
+@import url('main/review.css');
 
 * {
   box-sizing: border-box;

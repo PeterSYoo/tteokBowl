@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const tteokBowlSchema = new Schema({
+  name: String,
   spiceLevel: {
     name: {
       type: String

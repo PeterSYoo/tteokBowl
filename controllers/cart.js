@@ -15,5 +15,14 @@ router.get('/', (req, res) => {
   });
 })
 
+// Show / Review
+router.get('/:id', (req, res) => {
+  Tteok.findById(req.params.id, (error, foundProduct) => {
+    res.render('cart/review.ejs', {
+      tteok: foundProduct,
+    });
+  });
+})
+
 // Export User Router
 module.exports = router;

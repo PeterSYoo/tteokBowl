@@ -1,0 +1,29 @@
+/* Main - Review */
+.main-review {
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 90px 1120px 90px;
+  grid-template-rows: 811px;
+  grid-template-areas:
+  "empty-col-1 build-container empty-col-2";
+  grid-area: main;
+}
+.build-container {
+  grid-area: build-container;
+  display: grid;
+  grid-template-columns: 60px 530px 530px;
+  grid-template-rows: 811px;
+  grid-template-areas:
+  "go-back bowl-img build-bowl-list";
+}
+.go-back {
+  grid-area: go-back;
+  margin-top: 150px;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-bottom: 1px solid #ebebeb;
+}
+/* /Main */
