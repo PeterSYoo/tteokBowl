@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('../partials/head.ejs')  %>
+</head>
+<body>
+
+  <div class="container">
+    <!--Empty Columns-->
+    <%- include('../partials/empty-col.ejs')  %>
+    <!--/Empty Columns-->
+    <header>
+      <%- include('../partials/header.ejs')  %>
+    </header>
+    <nav>
+      <div class="nav">Home Page > Cart</div>
+    </nav>
+    <main class="main-cart">
+      <div class="cart-title">
+        <h1>Cart</h1>
+          <% tteok.forEach(tteok => {  %>
+            Spice Level - <%= tteok.spiceLevel.name %><br>
+            <%= tteok.toppings.riceCakes.name %> - $<br>
+            - Extras - $<br>
+            Ramen Noodles - - $<br>
+            - Extras - $<br>
+          <% }) %>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <%- include('../partials/footer.ejs')  %>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

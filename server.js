@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const userController = require('./controllers/users');
 const sessionsController = require('./controllers/sessions');
 const buildController = require('./controllers/buildabowl');
+const cartController = require('./controllers/cart');
 const session = require('express-session');
 const mongoose = require ('mongoose');
 const bcrypt = require('bcrypt');
@@ -52,6 +53,7 @@ app.use(( req, res, next ) => {
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
 app.use('/buildabowl', buildController);
+app.use('/cart', cartController);
 
 // Routes
 // Index
@@ -99,6 +101,7 @@ app.post('/', (req, res) => {
     }
   });
 })
+
 
 // Listener
 app.listen(PORT, () => console.log('express is listening on:', PORT));

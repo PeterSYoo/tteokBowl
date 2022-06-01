@@ -3,130 +3,31 @@ const Schema = mongoose.Schema;
 
 const tteokBowlSchema = new Schema({
   spiceLevel: {
-    mild: {
-      type: Boolean
-    },
-    original: {
-      type: Boolean
-    },
-    spicy: {
-      type: Boolean
-    },
-    volcano: {
-      type: Boolean
+    name: {
+      type: String
     }
   },
   toppings: {
     riceCakes: {
-      extra: {
-        type: Boolean
-      },
       price: {
         type: Number
       },
-      include: {
+      choice: {
         type: Boolean
       },
       name: {
         type: String
-      }
-    },
-    ramenNoodles: {
-      extra: {
-        type: Boolean
       },
-      price: {
-        type: Number
-      },
-      include: {
-        type: Boolean
-      },
-      name: {
-        type: String
-      }
-    },
-    fishCakes: {
-      extra: {
-        type: Boolean
-      },
-      price: {
-        type: Number
-      },
-      include: {
-        type: Boolean
-      },
-      name: {
-        type: String
-      }
-    },
-    eggs: {
-      extra: {
-        type: Boolean
-      },
-      price: {
-        type: Number
-      },
-      include: {
-        type: Boolean
-      },
-      name: {
-        type: String
-      }
-    },
-    mozzCheese: {
-      extra: {
-        type: Boolean
-      },
-      price: {
-        type: Number
-      },
-      include: {
-        type: Boolean
-      },
-      name: {
-        type: String
-      }
-    },
-    udonNoodles: {
-      extra: {
-        type: Boolean
-      },
-      price: {
-        type: Number
-      },
-      include: {
-        type: Boolean
-      },
-      name: {
-        type: String
-      }
-    },
-    miniSausages: {
-      extra: {
-        type: Boolean
-      },
-      price: {
-        type: Number
-      },
-      include: {
-        type: Boolean
-      },
-      name: {
-        type: String
-      }
-    },
-    spam: {
-      extra: {
-        type: Boolean
-      },
-      price: {
-        type: Number
-      },
-      include: {
-        type: Boolean
-      },
-      name: {
-        type: String
+      extras: {
+        price: {
+          type: Number
+        },
+        choice: {
+          type: Boolean
+        },
+        name: {
+          type: String
+        }
       }
     }
   }

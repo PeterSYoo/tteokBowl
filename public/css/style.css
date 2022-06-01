@@ -5,6 +5,7 @@
 @import url('main/login.css');
 @import url('main/dashboard.css');
 @import url('main/build.css');
+@import url('main/cart.css');
 
 * {
   box-sizing: border-box;
@@ -187,7 +188,7 @@ footer {
     "empty-col-1 footer-class empty-col-2";
   grid-area: footer;
 }
-.footer-class {
+.footer {
   margin: auto;
   grid-area: footer-class;
   font-size: 12px;
