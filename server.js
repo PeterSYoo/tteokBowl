@@ -4,6 +4,7 @@ const express = require('express');
 const methodOverride = require('method-override');
 const userController = require('./controllers/users');
 const sessionsController = require('./controllers/sessions');
+const buildController = require('./controllers/buildabowl');
 const session = require('express-session');
 const mongoose = require ('mongoose');
 const bcrypt = require('bcrypt');
@@ -50,6 +51,7 @@ app.use(( req, res, next ) => {
 // Controllers
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
+app.use('/buildabowl', buildController);
 
 // Routes
 // Index

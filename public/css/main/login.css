@@ -2,7 +2,7 @@
 .main-login-new {
   background-color: #FFFFFF;
   display: grid;
-  grid-template-columns: 90px 1fr 90px;
+  grid-template-columns: 90px 1120px 90px;
   grid-template-rows: 100px 711px;
   grid-template-areas:
     "empty-col-1 register-title empty-col-2"

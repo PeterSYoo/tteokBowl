@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('../partials/head.ejs')  %>
+</head>
+<body>
+
+  <div class="container">
+    <!--Empty Columns-->
+    <%- include('../partials/empty-col.ejs')  %>
+    <!--/Empty Columns-->
+    <header>
+      <%- include('../partials/header.ejs')  %>
+    </header>
+    <nav>
+      <div class="nav">Home page > Build a bowl</div>
+    </nav>
+    <main class="main-build">
+      <div class="build-container">
+        <div class="go-back">
+          <a href="#"><img src="https://i.imgur.com/rEXIDeo.png"></a>
+        </div>
+        <div class="bowl-img">
+          Placeholder
+        </div>
+        <div class="build-bowl-list">
+
+          Spice Level
+          <hr>
+          <input type="radio" id="mild" value="Mild" name="spicy-level"><label for="mild">Mild</label>&nbsp;
+          <input type="radio" id="original" value="Original" name="spicy-level"><label for="original">Original<img src="https://i.imgur.com/x3riXKv.png"></label>&nbsp;
+          <input type="radio" id="spicy" value="Spicy" name="spicy-level"><label for="spicy">Spicy<img src="https://i.imgur.com/x3riXKv.png"><img src="https://i.imgur.com/x3riXKv.png"></label>&nbsp;
+          <input type="radio" id="volcano" value="Volcano" name="spicy-level"><label for="volcano">Volcano<img src="https://i.imgur.com/x3riXKv.png"><img src="https://i.imgur.com/x3riXKv.png"><img src="https://i.imgur.com/x3riXKv.png"></label>
+          <br><br><br>
+          Toppings
+          <hr>
+          <div class="toppings">
+            <div class="toppings-left">
+            <input type="checkbox" id="rice-cakes" value="Rice-cakes" name="toppings"><label for="rice-cakes"><font class="tab">Rice cakes</font></label><br>
+            <input class="tab" type="checkbox" id="rice-cakes-extra" value="Rice-cakes" name="toppings"><label for="rice-cakes-extra"><font class="tab">Extra</font></label><br>
+            <input type="checkbox" id="ramen-noodles" value="Ramen-noodles" name="toppings"><label for="ramen-noodles"><font class="tab">Ramen noodles</font></label><br>
+            <input class="tab" type="checkbox" id="ramen-noodles-extra" value="Ramen-noodles" name="toppings"><label for="ramen-noodles-extra"><font class="tab">Extra</font></label><br>
+            </div>
+            <div class="toppings-right">
+              $3<br>
+              $3<br>
+              $3<br>
+              $3<br>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <%- include('../partials/footer.ejs')  %>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

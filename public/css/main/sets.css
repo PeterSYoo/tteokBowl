@@ -1,8 +1,8 @@
 /* Main - Sets */
-.m-index {
+.main-sets {
   background-color: #FFFFFF;
   display: grid;
-  grid-template-columns: 90px 1fr 90px;
+  grid-template-columns: 90px 1120px 90px;
   grid-template-rows: 420px 46px 345px;
   grid-template-areas:
     "empty-col-1 build-a-bowl empty-col-2"

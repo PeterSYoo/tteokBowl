@@ -4,6 +4,7 @@
 @import url('main/register.css');
 @import url('main/login.css');
 @import url('main/dashboard.css');
+@import url('main/build.css');
 
 * {
   box-sizing: border-box;
@@ -28,7 +29,7 @@ body,html {
   display: grid;
   height: 100vh;
   min-width: 1440px;
-  grid-template-columns: 75px 1fr 75px;
+  grid-template-columns: 90px 1120px 90px;
   grid-template-rows: 70px 32px 1fr 25px 40px 1fr;
   grid-template-areas:
     "header header header"
@@ -144,14 +145,14 @@ header {
   justify-content: end;
   align-content: center;
   grid-area: logout;
-  margin-left: 21px;
+  margin-left: 22px;
 }
 .sign-up {
   display: grid;
   justify-content: end;
   align-content: center;
   grid-area: logout;
-  margin-left: 21px;
+  margin-left: 22px;
 }
 /* /Header */
 
@@ -224,3 +225,9 @@ input {
   padding: 5px;
 }
 /* /All Input Fields */
+
+/* Creates 2 space indent */
+.tab {
+  margin-left: 2.5em
+ }
+ /* /Creates 2 space indent */

@@ -1,0 +1,54 @@
+/* Main - Sets */
+.main-build {
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 90px 1120px 90px;
+  grid-template-rows: 811px;
+  grid-template-areas:
+  "empty-col-1 build-container empty-col-2";
+  grid-area: main;
+}
+.build-container {
+  grid-area: build-container;
+  display: grid;
+  grid-template-columns: 60px 530px 530px;
+  grid-template-rows: 811px;
+  grid-template-areas:
+  "go-back bowl-img build-bowl-list";
+}
+.go-back {
+  grid-area: go-back;
+  margin-top: 150px;
+}
+.bowl-img {
+  grid-area: bowl-img;
+  margin: 50px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.build-bowl-list {
+  grid-area: build-bowl-list;
+  margin: 50px;
+}
+.toppings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "toppings-left toppings-right";
+}
+.toppings-left {
+  grid-area: toppings-left;
+}
+.toppings-right {
+  grid-area: toppings-right;
+  display: grid;
+  justify-content: end;
+}
+hr {
+  border: 0;
+  height: 0;
+  border-bottom: 1px solid #ebebeb;
+}
+/* /Main */
