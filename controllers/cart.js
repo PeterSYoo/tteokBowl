@@ -2,7 +2,8 @@
 const bcrypt = require('bcrypt');
 const express = require('express');
 const router = express.Router();
-const Tteok = require('../models/tteok.js');
+const Tteok = require('../models/tteok');
+const Review = require('../models/review');
 
 // Index
 router.get('/', (req, res) => {

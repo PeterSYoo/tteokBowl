@@ -32,57 +32,60 @@
           <hr>
           <input type="hidden" id="name" value="Custom Tteok Bowl" name="name">
           <input type="radio" id="mild" value="Mild" name="spiceLevelName"><label for="mild">Mild</label>
-          <!-- <input class="tab" type="radio" id="original" value="Original" name="spicy-level"><label for="original">Original<img src="https://i.imgur.com/x3riXKv.png"></label>
-          <input class="tab" type="radio" id="spicy" value="Spicy" name="spicy-level"><label for="spicy">Spicy<img src="https://i.imgur.com/x3riXKv.png"><img src="https://i.imgur.com/x3riXKv.png"></label>
-          <input class="tab" type="radio" id="volcano" value="Volcano" name="spicy-level"><label for="volcano">Volcano<img src="https://i.imgur.com/x3riXKv.png"><img src="https://i.imgur.com/x3riXKv.png"><img src="https://i.imgur.com/x3riXKv.png"></label> -->
+          <input class="tab" type="radio" id="original" value="Original" name="spiceLevelName"><label for="original">Original<img src="https://i.imgur.com/x3riXKv.png"></label>
+          <input class="tab" type="radio" id="spicy" value="Spicy" name="spiceLevelName"><label for="spicy">Spicy<img src="https://i.imgur.com/x3riXKv.png"><img src="https://i.imgur.com/x3riXKv.png"></label>
+          <input class="tab" type="radio" id="volcano" value="Volcano" name="spiceLevelName"><label for="volcano">Volcano<img src="https://i.imgur.com/x3riXKv.png"><img src="https://i.imgur.com/x3riXKv.png"><img src="https://i.imgur.com/x3riXKv.png"></label>
           <br><br><br>
           Toppings
           <hr>
           <div class="toppings">
             <div class="toppings-left">
 
-                <input type="checkbox" id="rice-cakes" value="Rice Cakes" name="riceCakesName"><label for="rice-cakes"><font class="tab">Rice cakes</font></label><br>
-                <input type="hidden" id="rice-cakes-price" value="3" name="price">
-                <input class="tab" type="checkbox" id="rice-cakes-extra" value="true" name="riceCakesExtrasChoice"><label for="rice-cakes-extra"><font class="tab">Extra</font></label><br>
-<!-- 
-                <input type="checkbox" id="ramen-noodles" value="Ramen-noodles" name="toppings"><label for="ramen-noodles"><font class="tab">Ramen noodles</font></label><br>
-                <input class="tab" type="checkbox" id="ramen-noodles-extra" value="Ramen-noodles" name="toppings"><label for="ramen-noodles-extra"><font class="tab">Extra</font></label><br>
-                
-                <input type="checkbox" id="udon-noodles" value="Udon-noodles" name="toppings"><label for="udon-noodles"><font class="tab">Udon noodles</font></label><br>
-                <input class="tab" type="checkbox" id="udon-noodles-extra" value="Udon-noodles" name="toppings"><label for="udon-noodles-extra"><font class="tab">Extra</font></label><br>
+                <input type="checkbox" id="rice-cakes" value="Rice cakes" name="riceCakesName"><label for="rice-cakes"><font class="tab">Rice cakes</font></label><br>
+                <input type="hidden" id="rice-cakes-price" value="3" name="riceCakesPrice">
+                <input class="tab" type="checkbox" id="rice-cakes-extra" value="extras" name="riceCakesExtrasName"><label for="rice-cakes-extra"><font class="tab">Extra</font></label>
+                <input type="hidden" id="rice-cakes-extras-price" value="3" name="riceCakesExtrasPrice">
+                <br><br>
 
-                <input type="checkbox" id="fish-cakes" value="Fish-cakes" name="toppings"><label for="fish-cakes"><font class="tab">Fish cakes</font></label><br>
-                <input class="tab" type="checkbox" id="fish-cakes-extra" value="Fish-cakes" name="toppings"><label for="fish-cakes-extra"><font class="tab">Extra</font></label><br>
+                <input type="checkbox" id="ramen-noodles" value="Ramen noodles" name="ramenNoodlesName"><label for="ramen-noodles"><font class="tab">Ramen noodles</font></label><br>
+                <input type="hidden" id="ramen-noodles-price" value="3" name="ramenNoodlesPrice">
+                <input class="tab" type="checkbox" id="ramen-noodles-extra" value="extras" name="ramenNoodlesExtrasName"><label for="ramen-noodles-extra"><font class="tab">Extra</font></label>
+                <input type="hidden" id="ramen-noodles-extras-price" value="3" name="ramenNoodlesExtrasPrice">
+                <br><br>
 
-                <input type="checkbox" id="eggs" value="Eggs" name="toppings"><label for="eggs"><font class="tab">Eggs</font></label><br>
-                <input class="tab" type="checkbox" id="eggs-extra" value="Eggs" name="toppings"><label for="eggs-extra"><font class="tab">Extra</font></label><br>
+                <input type="checkbox" id="udon-noodles" value="Udon noodles" name="udonNoodlesName"><label for="udon-noodles"><font class="tab">Udon noodles</font></label><br>
+                <input type="hidden" id="udon-noodles-price" value="3" name="udonNoodlesPrice">
+                <input class="tab" type="checkbox" id="udon-noodles-extra" value="extras" name="udonNoodlesExtrasName"><label for="udon-noodles-extra"><font class="tab">Extra</font></label>
+                <input type="hidden" id="udon-noodles-extras-price" value="3" name="udonNoodlesExtrasPrice">
+                <br><br>
 
-                <input type="checkbox" id="mozz-cheese" value="Mozz-cheese" name="toppings"><label for="mozz-cheese"><font class="tab">Mozzarella Cheese</font></label><br>
-                <input class="tab" type="checkbox" id="mozz-cheese-extra" value="Mozz-cheese" name="toppings"><label for="mozz-cheese-extra"><font class="tab">Extra</font></label><br>
+                <input type="checkbox" id="fish-cakes" value="Fish cakes" name="fishCakesName"><label for="fish-cakes"><font class="tab">Fish cakes</font></label><br>
+                <input type="hidden" id="fish-cakes-price" value="3" name="fishCakesPrice">
+                <input class="tab" type="checkbox" id="fish-cakes-extra" value="extras" name="fishCakesExtrasName"><label for="fish-cakes-extra"><font class="tab">Extra</font></label>
+                <input type="hidden" id="fish-cakes-extras-price" value="3" name="fishCakesExtrasPrice">
+                <br><br>
 
-                <input type="checkbox" id="mini-sausages" value="Mini-sausages" name="toppings"><label for="mini-sausages"><font class="tab">Mini sausages</font></label><br>
-                <input class="tab" type="checkbox" id="mini-sausages-extra" value="Mini-sausages" name="toppings"><label for="mini-sausages-extra"><font class="tab">Extra</font></label><br>
+                <input type="checkbox" id="eggs" value="Eggs" name="eggsName"><label for="eggs"><font class="tab">Eggs</font></label><br>
+                <input type="hidden" id="eggs-price" value="3" name="eggsPrice">
+                <input class="tab" type="checkbox" id="eggs-extra" value="extras" name="eggsExtrasName"><label for="eggs-extra"><font class="tab">Extra</font></label>
+                <input type="hidden" id="eggs-extras-price" value="3" name="eggsExtrasPrice">
+                <br><br>
 
-                <input type="checkbox" id="spam" value="Spam" name="toppings"><label for="spam"><font class="tab">Spam</font></label><br>
-                <input class="tab" type="checkbox" id="spam-extra" value="Spam" name="toppings"><label for="spam-extra"><font class="tab">Extra</font></label><br> -->
+                <input type="checkbox" id="mozz-cheese" value="Mozzarella cheese" name="mozzCheeseName"><label for="mozz-cheese"><font class="tab">Mozzarella cheese</font></label><br>
+                <input type="hidden" id="mozz-cheese-price" value="3" name="mozzCheesePrice">
+                <input class="tab" type="checkbox" id="mozz-cheese-extra" value="extras" name="mozzCheeseExtrasName"><label for="mozz-cheese-extra"><font class="tab">Extra</font></label>
+                <input type="hidden" id="mozz-cheese-extras-price" value="3" name="mozzCheeseExtrasPrice">
+                <br><br>
+
+                <input type="checkbox" id="mini-sausages" value="Mini sausages" name="miniSausagesName"><label for="mini-sausages"><font class="tab">Mini sausages</font></label><br>
+                <input type="hidden" id="mini-sausages-price" value="3" name="miniSausagesPrice">
+                <input class="tab" type="checkbox" id="mini-sausages-extra" value="extras" name="miniSausagesExtrasName"><label for="mini-sausages-extra"><font class="tab">Extra</font></label>
+                <input type="hidden" id="mini-sausages-extras-price" value="3" name="miniSausagesExtrasPrice">
+                <br><br>
+
             </div>
             <div class="toppings-right">
-              $3<br>
-              $3<br>
-              $3<br>
-              $3<br>
-              $3<br>
-              $3<br>
-              $3<br>
-              $3<br>
-              $2<br>
-              $2<br>
-              $4<br>
-              $4<br>
-              $3<br>
-              $3<br>
-              $5<br>
-              $5<br>
+
             </div>
           </div>
           <br><br>
