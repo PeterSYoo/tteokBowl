@@ -181,17 +181,15 @@ nav {
 footer {
   display: grid;
   background-color: #FFFFFF;
-  grid-template-columns: 90px 1fr 90px;
+  grid-template-columns: 90px 1120px 90px;
   grid-template-rows: 1fr;
   grid-template-areas:
-    "empty-col-1 footer empty-col-2";
+    "empty-col-1 footer-class empty-col-2";
   grid-area: footer;
 }
-.footer {
-  display: grid;
-  justify-content: center;
-  align-content: start;
-  grid-area: footer;
+.footer-class {
+  margin: auto;
+  grid-area: footer-class;
   font-size: 12px;
 }
 /* /Footer */
