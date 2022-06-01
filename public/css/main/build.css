@@ -22,10 +22,9 @@
 }
 .bowl-img {
   grid-area: bowl-img;
-  margin: 50px;
+  margin-top: 75px;
   display: grid;
   justify-content: center;
-  align-content: center;
 }
 .build-bowl-list {
   grid-area: build-bowl-list;
