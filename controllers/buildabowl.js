@@ -17,7 +17,10 @@ router.post('/', (req, res) => {
   Tteok.create({
     name: req.body.name,
     spiceLevel: {
-      name: req.body.spiceLevelName,
+      mild: req.body.mild,
+      original: req.body.original,
+      spicy: req.body.spicy,
+      volcano: req.body.volcano,
       },
     toppings: {
       riceCakes: {

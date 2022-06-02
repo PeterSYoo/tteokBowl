@@ -11,7 +11,7 @@
 .review-container {
   grid-area: review-container;
   display: grid;
-  grid-template-columns: 60px 530px 530px;
+  grid-template-columns: 60px 540px 520px;
   grid-template-rows: 811px;
   grid-template-areas:
   "go-back review-list bowl-img";
