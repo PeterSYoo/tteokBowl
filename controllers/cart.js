@@ -28,8 +28,13 @@ router.get('/:id/review', (req, res) => {
 
 // Update
 router.put('/:id/review', (req, res) => {
+  let bowlUpdated={
+    toppings: {riceCakes: {name: req.body.riceCakesName['checkbox']},},    
+  }
+
   Tteok.findByIdAndUpdate(
     req.params.id,
+    bowlUpdated,
     {
       name: req.body.name,
       spiceLevel: {

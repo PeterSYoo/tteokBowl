@@ -40,8 +40,13 @@
                   <hr>
                   <div class="review-items">
                     <div class="review-list-left">
-        
-                        <input type="checkbox" id="rice-cakes" value="Rice cakes" name="riceCakesName"><label for="rice-cakes"><font class="tab">Rice cakes</font></label><br>
+                      <%if(tteok.toppings.riceCakes.name){%>
+                        <input type="checkbox" id="rice-cakes" value="Rice cakes" name="riceCakesName[checkbox]" checked>
+                      <% } else { %>
+                        <input type="checkbox" id="rice-cakes" value="Rice cakes" name="riceCakesName[checkbox]" unchecked>
+                      <% } %>
+                        
+                        <label for="rice-cakes"><font class="tab">Rice cakes</font></label><br>
                         <input type="hidden" id="rice-cakes-price" value="3" name="riceCakesPrice">
                         <input class="tab" type="checkbox" id="rice-cakes-extra" value="extras" name="riceCakesExtrasName"><label for="rice-cakes-extra"><font class="tab">Extra</font></label>
                         <input type="hidden" id="rice-cakes-extras-price" value="3" name="riceCakesExtrasPrice">
