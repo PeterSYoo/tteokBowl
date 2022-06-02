@@ -5,20 +5,51 @@
   grid-template-columns: 90px 1120px 90px;
   grid-template-rows: 100px 711px;
   grid-template-areas:
-    "empty-col-1 register-title empty-col-2"
-    "empty-col-1 register-form empty-col-2";
+    "empty-col-1 register-container empty-col-2";
   grid-area: main;
+}
+.register-container {
+  grid-area: register-container;
+  display: grid;
+  grid-template-columns: 60px 1000px 60px;
+  grid-template-rows: 811px;
+  grid-template-areas:
+  "go-back register-list empty-col-1";
+}
+.go-back {
+  grid-area: go-back;
+  margin-top: 150px;
+}
+.register-list {
+  grid-area: register-list;
+  margin-top: 50px;
+}
+.register-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+  grid-template-areas:
+    "register-title"
+    "register-input"
 }
 .register-title {
   display: grid;
   justify-content: center;
-  align-content: start;
   grid-area: register-title;
 }
-.register-form {
+.register-input {
   display: grid;
   justify-content: center;
-  align-content: start;
-  grid-area: register-form;
+  grid-area: register-input;
+}
+.register-submit {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
 }
 /* /Main */

@@ -16,20 +16,32 @@
       <div class="nav">Home Page > Register</div>
     </nav>
     <main class="main-users-new">
-      <div class="register-title">
-        <h1>Register</h1>
-      </div>
-      <div class="register-form">
-        <form action='/users' method='POST'>
-          <label for="email">Email:</label>
-          <input type="email" name="email" id="email" />
-      
-          <label for="password">Password:</label>
-          <input type="password" name="password" id="password" />
-      
-          <input type="submit" value="Register">
-        </form>
-      </div>
+      <div class="register-container">
+        <div class="go-back">
+          <script>
+          document.write('<a href="' + document.referrer + '"><img src="https://i.imgur.com/rEXIDeo.png"></a>');
+          </script>
+        </div>
+
+        <div class="register-list">
+          <div class="register-form">
+
+            <div class="register-title">
+              <h1>Register</h1><br>
+            </div>
+            <div class="register-input">
+              <form action='/users' method='POST'>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" />
+                <label class="tab" for="password">Password:</label>
+                <input type="password" name="password" id="password" /><br><br><br>
+                <center><input class="register-submit" type="submit" value="Register"></center>
+              </form><br><br>
+              <center><a href="/sessions/new">Already registered? Login</a></center>
+            </div>
+          </div>
+        </div>
+
     </main>
     <footer>
       <div class="footer">

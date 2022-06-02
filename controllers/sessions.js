@@ -11,6 +11,14 @@ router.get('/new', (req, res) => {
   });
 })
 
+// Error
+router.get('/error', (req, res) => {
+  res.render('sessions/error.ejs', {
+    currentUser: req.session.currentUser,
+    createdUser: req.session.createdUser,
+  });
+});
+
 // Delete (logout route)
 router.delete('/', (req, res) => {
   req.session.destroy((error) => {
@@ -26,7 +34,7 @@ router.post('/', (req, res) => {
   }, (error, foundUser) => {
     // send error msg if no user is found
     if (!foundUser) {
-      res.send('Oops! No user with that email address has been registered.');
+      res.redirect('/sessions/error')
     } else {
       // if a user has been found
       // compare given password with hashed password we have stored

@@ -29,7 +29,7 @@
           <div class="cart-items">
             <div class="cart-list-left">
               <% tteok.forEach(tteok => { %>
-                <a href="/cart/<%= tteok._id %>/review">Edit</a>
+                <a href="/cart/<%= tteok._id %>/review">Edit</a>&nbsp;&nbsp;<font color="">|</font> 
                 <a href="/cart/<%= tteok._id %>?_method=DELETE">&nbsp;Delete</a>
                 <font class="tab"><%= tteok.name %></font><br>
               <% }) %>
