@@ -39,6 +39,18 @@
   display: grid;
   justify-content: end;
 }
+.edit-bowl {
+  display: grid;
+  grid-area: build-bowl-list;
+}
+.edit-bowl>input {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
 .bowl-img-review {
   grid-area: bowl-img;
   margin-top: 75px;
