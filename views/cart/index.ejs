@@ -29,18 +29,48 @@
           <div class="cart-items">
             <div class="cart-list-left">
               <% tteok.forEach(tteok => { %>
-                <a href="/cart/<%= tteok._id %>/review">Edit</a>&nbsp;&nbsp;<font color="">|</font> 
+                <a href="/cart/<%= tteok._id %>/review">Edit</a>&nbsp;&nbsp;|
                 <a href="/cart/<%= tteok._id %>?_method=DELETE">&nbsp;Delete</a>
-                <font class="tab"><%= tteok.name %></font><br>
+                <font class="tab"><%= tteok.name %></font><br><br>
               <% }) %>
             </div>
             <div class="cart-list-right">
-              
+              <div class="calc-cart">
+              <% tteok.forEach(tteok => { %>
+
+                <% const sumArr = [
+                  tteok.toppings.riceCakes.price, 
+                  tteok.toppings.riceCakes.extras.price,
+                  tteok.toppings.udonNoodles.price,
+                  tteok.toppings.udonNoodles.extras.price,
+                  tteok.toppings.ramenNoodles.price, 
+                  tteok.toppings.ramenNoodles.extras.price,
+                  tteok.toppings.fishCakes.price, 
+                  tteok.toppings.fishCakes.extras.price,
+                  tteok.toppings.eggs.price, 
+                  tteok.toppings.eggs.extras.price,
+                  tteok.toppings.mozzCheese.price, 
+                  tteok.toppings.mozzCheese.extras.price,
+                  tteok.toppings.miniSausages.price,
+                  tteok.toppings.miniSausages.extras.price,
+                  tteok.toppings.spam.price,
+                  tteok.toppings.spam.extras.price
+                  ];
+
+                  const initialValue = 0;
+                  const sumWithInitial = sumArr.reduce(
+                    (previousValue, currentValue) => { return previousValue + (currentValue || 0); }, 
+                    0);
+                %>
+                <%= sumWithInitial %>
+                <br><br>
+                <% }) %>
+              </div>
             </div>
           </div>
           <hr>
           <div class="cart-list-right">
-            Total - $15
+            <p>Total: <span id="priceCart">0</span></p>
           </div>
           <br><br>
           <div class="payment-info">

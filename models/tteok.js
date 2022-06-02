@@ -12,66 +12,50 @@ const tteokBowlSchema = new Schema({
   toppings: {
     riceCakes: {
       price: Number,
-      name: String,
       extras: {
         price: Number,
-        name: String,
       },
     },
     ramenNoodles: {
       price: Number,
-      name: String,
       extras: {
         price: Number,
-        name: String,
       },
     },
     udonNoodles: {
       price: Number,
-      name: String,
       extras: {
         price: Number,
-        name: String,
       },
     },
     fishCakes: {
       price: Number,
-      name: String,
       extras: {
         price: Number,
-        name: String,
       },
     },
     eggs: {
       price: Number,
-      name: String,
       extras: {
         price: Number,
-        name: String,
       },
     },
     mozzCheese: {
       price: Number,
-      name: String,
       extras: {
         price: Number,
-        name: String,
       },
     },
     miniSausages: {
       price: Number,
-      name: String,
       extras: {
         price: Number,
-        name: String,
       },
     },
     spam: {
       price: Number,
-      name: String,
       extras: {
         price: Number,
-        name: String,
       },
     },
   },

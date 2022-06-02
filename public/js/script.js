@@ -26,17 +26,29 @@ $(function () {
   })
 })
 
-// Total price
+// Checked items adds to total price
 function calcscore(){
-  let score = 0;
-    let checked=$('.calc:checked ~ 	 input[type=hidden]').each(function(){
-    score+=parseInt($(this).val());
+  let sum = 0;
+    let checked=$('.calc:checked').each(function(){
+    sum = sum + parseInt($(this).val());
     });
-    console.log(score);
-$('#price').text(score.toFixed(2));
+    console.log(sum);
+$('#price').text(sum.toFixed(2));
 }
 $(document).ready(function(){
 $('.calc').change(function(){
  calcscore()
 });
 });
+
+// Total Cart Price
+// function sumCart(){
+//   let sum = 0;
+//   $('.calc-cart').each(function(){
+//     sum = sum + parseInt($(this).val());
+//     });
+//     console.log(sum);
+// $('#priceCart').text(score.toFixed(2));
+// }
+// sumCart()
+

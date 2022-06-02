@@ -14,7 +14,7 @@ const db = mongoose.connection;
 const MONGODB_URI = process.env.MONGODB_URI;
 const PORT = process.env.PORT;
 
-const TteokBowl = require('./models/tteok')
+const TteokBowl = require('./models/tteok');
 const User = require('./models/user.js');
 
 // Database Connect
