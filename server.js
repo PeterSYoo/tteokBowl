@@ -44,7 +44,6 @@ app.use(( req, res, next ) => {
       // change the original METHOD
       // into DELETE method
       req.method = 'DELETE';
-      // and set requested url to /user/12
       req.url = req.path;
   }       
   next(); 
