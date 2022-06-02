@@ -32,7 +32,7 @@ body,html {
   height: 100vh;
   min-width: 1440px;
   grid-template-columns: 90px 1120px 90px;
-  grid-template-rows: 70px 32px 812px 75px 40px 1fr;
+  grid-template-rows: 70px 32px 1fr 75px 40px 1fr;
   grid-template-areas:
     "header header header"
     "nav nav nav"

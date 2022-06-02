@@ -25,3 +25,18 @@ $(function () {
       $('input[type=radio]:checked').not(this).prop('checked', false);
   })
 })
+
+// Total price
+function calcscore(){
+  let score = 0;
+    let checked=$('.calc:checked ~ 	 input[type=hidden]').each(function(){
+    score+=parseInt($(this).val());
+    });
+    console.log(score);
+$('#price').text(score.toFixed(2));
+}
+$(document).ready(function(){
+$('.calc').change(function(){
+ calcscore()
+});
+});

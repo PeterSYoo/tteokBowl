@@ -3,7 +3,7 @@
   background-color: #FFFFFF;
   display: grid;
   grid-template-columns: 90px 1120px 90px;
-  grid-template-rows: 811px;
+  grid-template-rows: 1fr;
   grid-template-areas:
   "empty-col-1 build-container empty-col-2";
   grid-area: main;
@@ -12,7 +12,7 @@
   grid-area: build-container;
   display: grid;
   grid-template-columns: 60px 530px 530px;
-  grid-template-rows: 811px;
+  grid-template-rows: 1fr;
   grid-template-areas:
   "go-back bowl-img build-bowl-list";
 }
@@ -55,8 +55,8 @@
 }
 .toppings {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 0.25fr;
+  grid-template-rows: 2fr;
   grid-template-areas:
     "toppings-left toppings-right";
 }
@@ -67,6 +67,20 @@
   grid-area: toppings-right;
   display: grid;
   justify-content: end;
+  align-content: start;
+}
+.toppings-total {
+  grid-area: toppings-right;
+  display: grid;
+  justify-content: end;
+}
+.font-right {
+  width: 100%;
+  text-align: right;
+  color: #73AD21;
+}
+.price-box {
+  opacity: 0%;
 }
 hr {
   border: 0;

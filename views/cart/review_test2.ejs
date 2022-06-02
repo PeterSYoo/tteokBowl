@@ -33,13 +33,13 @@
                   <input type="hidden" id="name" value="Custom Tteok Bowl" name="name">
 
 
-                  <input type="radio" id="mild" value="Mild" name="spiceLevelName">
+                  <input type="radio" id="mild" value="Mild" name="mild" <%= tteok.spiceLevel.mild ? "checked" : "" %>>
                   <label for="mild">Mild</label>
-                  <input class="tab" type="radio" id="original" value="Original" name="spiceLevelName">
+                  <input class="tab" type="radio" id="original" value="Original" name="original" <%= tteok.spiceLevel.original ? "checked" : "" %>>
                   <label for="original">Original<img src="https://i.imgur.com/x3riXKv.png"></label>
-                  <input class="tab" type="radio" id="spicy" value="Spicy" name="spiceLevelName">
+                  <input class="tab" type="radio" id="spicy" value="Spicy" name="spicy" <%= tteok.spiceLevel.spicy ? "checked" : "" %>>
                   <label for="spicy">Spicy<img src="https://i.imgur.com/x3riXKv.png"><img src="https://i.imgur.com/x3riXKv.png"></label>
-                  <input class="tab" type="radio" id="volcano" value="Volcano" name="spiceLevelName">
+                  <input class="tab" type="radio" id="volcano" value="Volcano" name="volcano" <%= tteok.spiceLevel.volcano ? "checked" : "" %>>
                   <label for="volcano">Volcano<img src="https://i.imgur.com/x3riXKv.png"><img src="https://i.imgur.com/x3riXKv.png"><img src="https://i.imgur.com/x3riXKv.png"></label>
 
                   <br><br><br>
@@ -50,96 +50,64 @@
                     <div class="review-list-left">
 
 
-                        <input type="checkbox" id="rice-cakes" value="Rice cakes" name="riceCakesName">
+                        <input type="checkbox" id="rice-cakes" value="Rice cakes" name="riceCakesName" <%= tteok.toppings.riceCakes.name ? "checked" : "" %>>
                         <label for="rice-cakes"><font class="tab">Rice cakes</font></label><br>
                         <input type="hidden" id="rice-cakes-price" value="3" name="riceCakesPrice">   
-                        <input class="tab" type="checkbox" id="rice-cakes-extra" value="extras" name="riceCakesExtrasName">
+                        <input class="tab" type="checkbox" id="rice-cakes-extra" value="extras" name="riceCakesExtrasName" <%= tteok.toppings.riceCakes.extras.name ? "checked" : "" %>>
                         <label for="rice-cakes-extra"><font class="tab">Extra</font></label>
                         <input type="hidden" id="rice-cakes-extras-price" value="3" name="riceCakesExtrasPrice">
                         <br><br>
         
                     
-                        <input type="checkbox" id="ramen-noodles" value="Ramen noodles" name="ramenNoodlesName">
+                        <input type="checkbox" id="ramen-noodles" value="Ramen noodles" name="ramenNoodlesName" <%= tteok.toppings.ramenNoodles.name ? "checked" : "" %>>
                         <label for="ramen-noodles"><font class="tab">Ramen noodles</font></label><br>
                         <input type="hidden" id="ramen-noodles-price" value="3" name="ramenNoodlesPrice">
-                        <input class="tab" type="checkbox" id="ramen-noodles-extra" value="extras" name="ramenNoodlesExtrasName">
-                     
-                  
+                        <input class="tab" type="checkbox" id="ramen-noodles-extra" value="extras" name="ramenNoodlesExtrasName" <%= tteok.toppings.ramenNoodles.extras.name ? "checked" : "" %>>
                         <label for="ramen-noodles-extra"><font class="tab">Extra</font></label>
                         <input type="hidden" id="ramen-noodles-extras-price" value="3" name="ramenNoodlesExtrasPrice">
                         <br><br>
         
                  
-                        <input type="checkbox" id="udon-noodles" value="Udon noodles" name="udonNoodlesName">
-                  
-              
+                        <input type="checkbox" id="udon-noodles" value="Udon noodles" name="udonNoodlesName" <%= tteok.toppings.udonNoodles.name ? "checked" : "" %>>
                         <label for="udon-noodles"><font class="tab">Udon noodles</font></label><br>
                         <input type="hidden" id="udon-noodles-price" value="3" name="udonNoodlesPrice">
-
-                  
-                        <input class="tab" type="checkbox" id="udon-noodles-extra" value="extras" name="udonNoodlesExtrasName">
-                    
-                
+                        <input class="tab" type="checkbox" id="udon-noodles-extra" value="extras" name="udonNoodlesExtrasName" <%= tteok.toppings.udonNoodles.extras.name ? "checked" : "" %>>
                         <label for="udon-noodles-extra"><font class="tab">Extra</font></label>
                         <input type="hidden" id="udon-noodles-extras-price" value="3" name="udonNoodlesExtrasPrice">
                         <br><br>
         
                   
-                        <input type="checkbox" id="fish-cakes" value="Fish cakes" name="fishCakesName">
-                
-         
+                        <input type="checkbox" id="fish-cakes" value="Fish cakes" name="fishCakesName" <%= tteok.toppings.fishCakes.name ? "checked" : "" %>>
                         <label for="fish-cakes"><font class="tab">Fish cakes</font></label><br>
                         <input type="hidden" id="fish-cakes-price" value="3" name="fishCakesPrice">
-
-            
-                        <input class="tab" type="checkbox" id="fish-cakes-extra" value="extras" name="fishCakesExtrasName">
-               
-                   
+                        <input class="tab" type="checkbox" id="fish-cakes-extra" value="extras" name="fishCakesExtrasName" <%= tteok.toppings.fishCakes.extras.name ? "checked" : "" %>>
                         <label for="fish-cakes-extra"><font class="tab">Extra</font></label>
                         <input type="hidden" id="fish-cakes-extras-price" value="3" name="fishCakesExtrasPrice">
                         <br><br>
         
                    
-                        <input type="checkbox" id="eggs" value="Eggs" name="eggsName">
-               
-                  
+                        <input type="checkbox" id="eggs" value="Eggs" name="eggsName" <%= tteok.toppings.eggs.name ? "checked" : "" %>>
                         <label for="eggs"><font class="tab">Eggs</font></label><br>
                         <input type="hidden" id="eggs-price" value="3" name="eggsPrice">
-
-                   
-                        <input class="tab" type="checkbox" id="eggs-extra" value="extras" name="eggsExtrasName">
-        
-                   
+                        <input class="tab" type="checkbox" id="eggs-extra" value="extras" name="eggsExtrasName" <%= tteok.toppings.eggs.extras.name ? "checked" : "" %>>
                         <label for="eggs-extra"><font class="tab">Extra</font></label>
                         <input type="hidden" id="eggs-extras-price" value="3" name="eggsExtrasPrice">
                         <br><br>
         
                   
-                        <input type="checkbox" id="mozz-cheese" value="Mozzarella cheese" name="mozzCheeseName">
-                  
-                
+                        <input type="checkbox" id="mozz-cheese" value="Mozzarella cheese" name="mozzCheeseName" <%= tteok.toppings.mozzCheese.name ? "checked" : "" %>>
                         <label for="mozz-cheese"><font class="tab">Mozzarella cheese</font></label><br>
                         <input type="hidden" id="mozz-cheese-price" value="3" name="mozzCheesePrice">
-
-       
-                        <input class="tab" type="checkbox" id="mozz-cheese-extra" value="extras" name="mozzCheeseExtrasName">
-            
-                  
+                        <input class="tab" type="checkbox" id="mozz-cheese-extra" value="extras" name="mozzCheeseExtrasName" <%= tteok.toppings.mozzCheese.extras.name ? "checked" : "" %>>
                         <label for="mozz-cheese-extra"><font class="tab">Extra</font></label>
                         <input type="hidden" id="mozz-cheese-extras-price" value="3" name="mozzCheeseExtrasPrice">
                         <br><br>
         
                   
-                        <input type="checkbox" id="mini-sausages" value="Mini sausages" name="miniSausagesName">
-         
-               
+                        <input type="checkbox" id="mini-sausages" value="Mini sausages" name="miniSausagesName" <%= tteok.toppings.miniSausages.name ? "checked" : "" %>>
                         <label for="mini-sausages"><font class="tab">Mini sausages</font></label><br>
                         <input type="hidden" id="mini-sausages-price" value="3" name="miniSausagesPrice">
-
-                   
-                        <input class="tab" type="checkbox" id="mini-sausages-extra" value="extras" name="miniSausagesExtrasName">
-                   
-                
+                        <input class="tab" type="checkbox" id="mini-sausages-extra" value="extras" name="miniSausagesExtrasName" <%= tteok.toppings.miniSausages.extras.name ? "checked" : "" %>>
                         <label for="mini-sausages-extra"><font class="tab">Extra</font></label>
                         <input type="hidden" id="mini-sausages-extras-price" value="3" name="miniSausagesExtrasPrice">
                         <br><br>
