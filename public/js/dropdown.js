@@ -1,4 +1,5 @@
-document.addEventListener('click', e => {
+// Login dropdown
+$(document).on('click', (e) => {
   const isDropdownbutton = e.target.matches('[data-dropdown-button]');
   if (!isDropdownbutton && e.target.closest('[data-dropdown]') != null) return;
 
@@ -12,7 +13,15 @@ document.addEventListener('click', e => {
     if (dropdown === currentDropdown) return;
     dropdown.classList.remove('active');
   })
-});
+})
 
-console.log('dropdown js works');
+console.log('JS file is loaded');
 
+// Radio buttons
+$(function () {
+  $('input[type=radio]').on('change', function() {
+      // When any radio button on the page is selected,
+      // then deselect all other radio buttons.
+      $('input[type=radio]:checked').not(this).prop('checked', false);
+  })
+})
