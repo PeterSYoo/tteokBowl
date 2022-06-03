@@ -26,3 +26,4 @@ No need to register, login with:
 # Next Steps
 - Add responsive design for mobile and tablets.
 - Have data created by user be locked to user session.
+- Let user add to favorites when logged in to their session and saved to their session.
