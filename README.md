@@ -6,7 +6,7 @@ User is able to customize their own spicy rice cake bowl. They can add it to car
 # Screenshots
 ![Home](https://i.imgur.com/RUx0s44.png)
 ![Build](https://i.imgur.com/ApZIZGp.png)
-![Edit](https://i.imgur.com/Shp1tVV.png)
+![Edit](https://i.imgur.com/Y32aSsR.png)
 
 # Technologies Used
 - HTML5
