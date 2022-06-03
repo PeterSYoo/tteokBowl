@@ -18,7 +18,7 @@
   background-image: url('https://i.imgur.com/2kaW9kb.png');
   height: 950px;
 }
-.go-back {
+.go-back-build {
   grid-area: go-back;
   margin-top: 150px;
   margin-left: 25px;
