@@ -56,7 +56,7 @@
 }
 .bowl-img-review {
   grid-area: bowl-img;
-  margin-top: 75px;
+  margin-top: 115px;
   display: grid;
   justify-content: end;
 }
