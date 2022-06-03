@@ -15,10 +15,13 @@
   grid-template-rows: 1fr;
   grid-template-areas:
   "go-back bowl-img build-bowl-list";
+  background-image: url('https://i.imgur.com/zLRnOWk.png');
+  height: 867px;
 }
 .go-back {
   grid-area: go-back;
   margin-top: 150px;
+  margin-left: 25px;
 }
 .bowl-img {
   grid-area: bowl-img;
