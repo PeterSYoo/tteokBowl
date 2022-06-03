@@ -12,6 +12,7 @@ User is able to customize their own spicy rice cake bowl. They can add it to car
 - HTML5
 - CSS3
 - JavaScript
+- jQuery
 - Node.js
 - Mongoose ODM
 - MongoDB
