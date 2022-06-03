@@ -9,6 +9,7 @@ router.get('/new', (req, res) => {
   res.render('users/new.ejs', {
     currentUser: req.session.currentUser,
     createdUser: req.session.createdUser,
+    tabTitle: 'Tteok Bowl | registration',
   });
 });
 
@@ -16,6 +17,7 @@ router.get('/error', (req, res) => {
   res.render('users/error.ejs', {
     currentUser: req.session.currentUser,
     createdUser: req.session.createdUser,
+    tabTitle: 'Tteok Bowl | registration error',
   });
 });
 

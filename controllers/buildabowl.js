@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
   res.render('buildabowl/index.ejs', {
     currentUser: req.session.currentUser,
     createdUser: req.session.createdUser,
+    tabTitle: 'Tteok Bowl | build a custom bowl',
   });
 });
 

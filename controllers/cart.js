@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
       tteok: allTteok,
       currentUser: req.session.currentUser,
       createdUser: req.session.createdUser,
+      tabTitle: 'Tteok Bowl | cart',
     });
   });
 })
@@ -22,6 +23,7 @@ router.get('/:id/review', (req, res) => {
       tteok: foundTteok,
       currentUser: req.session.currentUser,
       createdUser: req.session.createdUser,
+      tabTitle: 'Tteok Bowl | edit bowl',
     });
   });
 })

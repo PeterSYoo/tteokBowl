@@ -8,6 +8,7 @@ const User = require('../models/user.js');
 router.get('/new', (req, res) => {
   res.render('sessions/new.ejs', {
     currentUser: req.session.currentUser,
+    tabTitle: 'Tteok Bowl | login',
   });
 })
 
@@ -16,6 +17,7 @@ router.get('/error', (req, res) => {
   res.render('sessions/error.ejs', {
     currentUser: req.session.currentUser,
     createdUser: req.session.createdUser,
+    tabTitle: 'Tteok Bowl | login error',
   });
 });
 

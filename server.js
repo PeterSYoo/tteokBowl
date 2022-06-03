@@ -59,6 +59,7 @@ app.use('/cart', cartController);
 app.get('/', (req, res) => {
 		res.render('index.ejs', {
 			currentUser: req.session.currentUser,
+      tabTitle: 'Tteok Bowl',
 		});
 });
 
@@ -67,7 +68,7 @@ app.get('/sets/:id' , (req, res) => {
   TteokBowl.findById(req.params.id, (error, foundBowl) => {
     res.render('/sets/index.ejs', {
       tteok: foundBowl,
-      tabTitle: 'Tteok Bowl | Premade Bowl',
+      tabTitle: 'Tteok Bowl | premade sets',
     });
   });
 })
