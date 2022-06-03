@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const tteokBowlSchema = new Schema({
   name: String,
+  img: String,
   spiceLevel: {
     mild: String,
     original: String,

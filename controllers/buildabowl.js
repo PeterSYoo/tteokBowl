@@ -16,6 +16,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   Tteok.create({
     name: req.body.name,
+    img: req.body.img,
     spiceLevel: {
       mild: req.body.mild,
       original: req.body.original,

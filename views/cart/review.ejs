@@ -28,10 +28,13 @@
 
 
                 <form action="/cart/<%=tteok._id%>/review?_method=PUT" method="POST">
+                  <label>
+                    Name: <input class="bowl-name" type="text" name="name" value="<%= tteok.name %>"/>
+                  </label>
+                  <br><br>
+
                   Spice Level
                   <hr>
-                  <input type="hidden" id="name" value="Custom Tteok Bowl" name="name">
-
 
                   <input type="radio" id="mild" value="Mild" name="mild" <%= tteok.spiceLevel.mild ? "checked" : "" %>>
                   <label for="mild">Mild</label>
@@ -230,7 +233,7 @@
             </div>
             <hr>
             <div class="toppings-total">
-              <p>Total: <span id="price">0</span></p>
+              <p>Total: $<span id="price">0</span></p>
             </div>
             <br><br>
             <div class="edit-bowl">
@@ -240,7 +243,7 @@
           </div>
           
         <div class="bowl-img-review">
-          <img src="https://via.placeholder.com/446x409.png">
+          <img src="<%= tteok.img %>">
         </div>
 
       </div>

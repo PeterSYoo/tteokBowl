@@ -30,6 +30,7 @@ router.get('/:id/review', (req, res) => {
 router.put('/:id/review', (req, res) => {
   let bowlUpdate={ 
     name: req.body.name,
+    img: req.body.img,
     spiceLevel: {
       mild: req.body.mild,
       original: req.body.original,

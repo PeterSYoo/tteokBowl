@@ -16,25 +16,25 @@
   align-content: center;
   background-color: #FFFFFF;
   grid-area: build-a-bowl;
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-columns: 1120px;
   grid-template-rows: 1fr;
   grid-template-areas:
-    "build-a-bowl-left build-a-bowl-right";
-}
-.build-a-bowl-left {
-  grid-area: build-a-bowl-left;
+    "build-a-bowl-right";
 }
 .build-a-bowl-right {
   border-radius: 10px;
-  width: 100%;
-  height: 100%;
+  background-image: url('https://i.imgur.com/BnnBJEL.png');
   overflow: hidden;
   grid-area: build-a-bowl-right;
 }
-.splash-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.hero-text {
+  padding: 150px 0;
+  text-align: center;
+  letter-spacing: -2px;
+  font-size: 3em;
+}
+.hero-text>a:hover {
+  color: #FFFFFF;
 }
 .premade-sets {
   display: grid;
@@ -57,41 +57,53 @@
 .set-1 {
   background-color: #FFFFFF;
   grid-area: set-1;
-  border: 1px solid #ebebeb;
   border-radius: 10px;
+  background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)), url('https://i.imgur.com/Gk4vjyL.png');
 }
-.set-1>img {
-  object-fit: cover;
-  border-radius: 10px;
+.set-a {
+  margin: 10px;
+  font-size: 20px;
+}
+.set-a>a:hover {
+  color: #FFFFFF;
 }
 .set-2 {
   background-color: #FFFFFF;
   grid-area: set-2;
-  border: 1px solid #ebebeb;
   border-radius: 10px;
+  background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)), url('https://i.imgur.com/P08BnKk.png');
 }
-.set-2>img {
-  object-fit: cover;
-  border-radius: 10px;
+.set-b {
+  margin: 10px;
+  font-size: 20px;
+}
+.set-b>a:hover {
+  color: #FFFFFF;
 }
 .set-3 {
   background-color: #FFFFFF;
   grid-area: set-3;
-  border: 1px solid #ebebeb;
   border-radius: 10px;
+  background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)), url('https://i.imgur.com/Qko2Ee0.png');
 }
-.set-3>img {
-  object-fit: cover;
-  border-radius: 10px;
+.set-c {
+  margin: 10px;
+  font-size: 20px;
+}
+.set-c>a:hover {
+  color: #FFFFFF;
 }
 .set-4 {
   background-color: #FFFFFF;
   grid-area: set-4;
-  border: 1px solid #ebebeb;
   border-radius: 10px;
+  background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)), url('https://i.imgur.com/sujrcZG.png');
 }
-.set-4>img {
-  object-fit: cover;
-  border-radius: 10px;
+.set-d {
+  margin: 10px;
+  font-size: 20px;
+}
+.set-d>a:hover {
+  color: #FFFFFF;
 }
 /* /Main */

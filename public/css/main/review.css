@@ -31,6 +31,9 @@
   grid-template-areas:
     "review-list-left review-list-right";
 }
+.bowl-name {
+  width: 50%;
+}
 .review-list-left {
   grid-area: review-list-left;
 }
