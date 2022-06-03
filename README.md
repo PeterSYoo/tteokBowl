@@ -1,7 +1,7 @@
 # Tteok Bowl
 Tteokbokki (떡볶이) is a popular Korean food made from small-sized rice cakes in a spicy chilli paste based sauce.
 
-User is able to customize their own spicy rice cake bowl. They can add it to cart, add it to favorites, edit their bowl, or delete their bowl. User must be logged in when adding to cart or adding to favorites.
+User is able to customize their own spicy rice cake bowl. They can add it to cart, add it to favorites, edit their bowl, or delete their bowl.
 
 # Screenshots
 ![Home](https://i.imgur.com/RUx0s44.png)
